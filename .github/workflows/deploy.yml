@@ -34,7 +34,7 @@ jobs:
       - name: Setup Github Pages
         uses: actions/configure-pages@v4
       - name: Upload Dist Folder to Github Pages
-        uses: actions/upload-pages-artifacts@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
       - name: Deploy to Github Pages
