@@ -13,12 +13,15 @@ header {
         display: flex;
         list-style: none;
         padding:0px;
-        li a {
+        li a, span {
             display: inline-block;
             padding: 0.5rem 0.8rem;
             color: @primary-text-color;
             text-decoration: none;
             .border-level-1()
+        }
+        li span.active {
+            background-color: darken(@primary-color, 20%);
         }
     }
 }

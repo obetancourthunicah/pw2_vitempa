@@ -1,10 +1,19 @@
 
 import global from './global';
 
-const getPageContext = ( page ) => {
-    return {
+import catalogoData from './pages/catalogoData';
 
-        ...global,
+const getPageContext = ( page ) => {
+
+    let pageVariables = {};
+    switch ( page ) {
+        case '/catalogo.html':
+            pageVariables = catalogoData;
+            break;
+    }
+    return {
+        ...pageVariables,
+        ...global(page),
     };
 }
 

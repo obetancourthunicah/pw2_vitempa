@@ -6,7 +6,11 @@
         <ul>
             {{#with menuOptions}}
                 {{#each this}}
-                <li><a href="{{url}}">{{label}}</a></li>
+                {{#if this.active}}
+                    <li><span class="active">{{label}}</span></li>
+                {{else}}
+                    <li><a href="{{url}}">{{label}}</a></li>
+                {{/if}}
                 {{/each}}
             {{/with}}
         </ul>

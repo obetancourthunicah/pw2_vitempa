@@ -1,10 +1,16 @@
-const global = {
-    title: 'Mi tienda',
-    menuOptions: [
+const global = (path) => {
+    return {
+        title: 'Mi tienda',
+        menuOptions: getMenuWithActivePath(path)
+    }
+}
+
+const getMenuWithActivePath = (path)=>{
+    return  [
         {
             label: 'Home',
             url: 'index.html',
-            page: 'index'
+            page: 'index',
         },
         {
             label: 'Acerca',
@@ -26,7 +32,12 @@ const global = {
             url: 'ofertas.html',
             page: 'ofertas'
         }
-    ]
+    ].map( o => {
+        return {
+            ...o,
+            active: path.includes(o.url)
+        }
+    });
 }
 
 export default global;
