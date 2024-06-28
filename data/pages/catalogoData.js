@@ -18,7 +18,8 @@ const catalogoData = {
             precio: 300.00,
             url: 'https://picsum.photos/id/239/300/300'
         },
-    ]
+    ],
+    anuncios: []
 }
 
 export default catalogoData;
